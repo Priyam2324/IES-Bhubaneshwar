@@ -41,15 +41,15 @@
       </ul>
 
       <!-- Mobile dropdown toggle -->
-      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">MENU &#9662;</div>
+      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">MENU ▼</div>
 
       <!-- Mobile nav items (duplicate of desktop menu) -->
       <ul id="mobileMenu" class="mobile-dropdown-menu">
-        <li><a href="#">HOME</a></li>
-        <li><a href="https://www.ieee.org/membership/join" target="_blank">JOIN US</a></li>
-        <li><a href="#events">EVENTS</a></li>
-        <li><a href="#contact">CONTACT US</a></li>
-        <li><a href="#office-bearers">OFFICE BEARERS</a></li>
+        <li><a onclick="toggleMobileMenu()" href="#">HOME</a></li>
+        <li><a onclick="toggleMobileMenu()" href="https://www.ieee.org/membership/join" target="_blank">JOIN US</a></li>
+        <li><a onclick="toggleMobileMenu()" href="#events">EVENTS</a></li>
+        <li><a onclick="toggleMobileMenu()" href="#contact">CONTACT US</a></li>
+        <li><a onclick="toggleMobileMenu()" href="#office-bearers">OFFICE BEARERS</a></li>
       </ul>
 
     </nav>
@@ -167,10 +167,55 @@
     </footer>
   </body>
 
-    <script>
-      function toggleMobileMenu() {
-        const menu = document.getElementById('mobileMenu');
-        menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-      }
-    </script>
+<script>
+  function getState() {
+    console.log("Toggling mobile menu");
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.querySelector('.mobile-menu-toggle');
+    console.log(menu.style.display);
+    console.log(menu.style.display==="flex");
+    console.log(menu.style.display==="none");
+  }
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.querySelector('.mobile-menu-toggle');
+  
+  const isOpen = menu.style.display === 'block';
+
+  // Toggle menu visibility
+  menu.style.display = isOpen ? 'none' : 'block';
+
+  // Update button arrow
+  btn.innerHTML = 'MENU ' + (isOpen ? '▼' : '▲'); // ▼ : ▲
+}
+
+  // Collapse mobile menu when a link is clicked
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuLinks = document.querySelectorAll('#mobileMenu a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').style.display = 'none';
+      });
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const OFFSET = 30; // adjust this number as needed
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        const targetId = this.getAttribute("href").substring(1);
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          const yOffset = -OFFSET;
+          const y = targetEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      });
+    });
+  });
+</script>
   </html>
