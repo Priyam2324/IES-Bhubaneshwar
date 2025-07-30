@@ -8,16 +8,15 @@
   </head>
   <body>
     <header>
-      <div class="top-bar">
-        <a href="https://www.ieee.org/" target="_blank">IEEE.org</a>
-        <a href="https://ieeexplore.ieee.org/Xplore/home.jsp" target="_blank"
-          >IEEE Xplore Digital Library</a
-        >
-        <a href="https://standards.ieee.org/" target="_blank">IEEE Standards</a>
-        <a href="https://spectrum.ieee.org/" target="_blank">IEEE Spectrum</a>
-        <a href="https://www.ieee.org/sitemap.html" target="_blank"
-          >More Sites</a
-        >
+      <div class="scrolling-text">
+        <div class="top-bar">
+          <a href="https://www.ieee.org/" target="_blank">IEEE.org</a>
+          <a href="https://ieeexplore.ieee.org/Xplore/home.jsp" target="_blank"
+            >IEEE Xplore Digital Library</a>
+          <a href="https://standards.ieee.org/" target="_blank">IEEE Standards</a>
+          <a href="https://spectrum.ieee.org/" target="_blank">IEEE Spectrum</a>
+          <a href="https://www.ieee.org/sitemap.html" target="_blank">More Sites</a>
+        </div>
       </div>
 
       <div class="logo-bar">
@@ -29,21 +28,30 @@
         <h1 class="chapter-name">IEEE IES Bhubaneswar</h1>
         <img src="Images/ieee.png" alt="IEEE logo" class="logo-right" />
       </div>
+        <h1 class="mobile-chapter-name">IEEE IES Bhubaneswar</h1>
     </header>
 
     <nav>
-      <ul>
+      <ul class="desktop-menu">
         <li><a href="#">HOME</a></li>
-        <li>
-          <a href="https://www.ieee.org/membership/join" target="_blank"
-            >JOIN US</a
-          >
-        </li>
-        <!-- <li><a href="#about">ABOUT US</a></li> -->
+        <li><a href="https://www.ieee.org/membership/join" target="_blank">JOIN US</a></li>
         <li><a href="#events">EVENTS</a></li>
         <li><a href="#contact">CONTACT US</a></li>
         <li><a href="#office-bearers">OFFICE BEARERS</a></li>
       </ul>
+
+      <!-- Mobile dropdown toggle -->
+      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">MENU &#9662;</div>
+
+      <!-- Mobile nav items (duplicate of desktop menu) -->
+      <ul id="mobileMenu" class="mobile-dropdown-menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="https://www.ieee.org/membership/join" target="_blank">JOIN US</a></li>
+        <li><a href="#events">EVENTS</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+        <li><a href="#office-bearers">OFFICE BEARERS</a></li>
+      </ul>
+
     </nav>
 
     <main>
@@ -63,7 +71,7 @@
               systems, power electronics, embedded systems, and industrial
               informatics. It organizes technical talks, workshops, seminars,
               student-driven initiatives, and academic-industry engagements to
-              uphold IEEE’s mission of advancing technology for the benefit of
+              uphold IEEE's mission of advancing technology for the benefit of
               humanity. By actively involving students, young professionals, and
               experienced experts, the Section serves as a hub for knowledge
               sharing and skill development. Through its emphasis on innovation
@@ -158,4 +166,11 @@
       <p>&copy; 2025 IEEE IES Bhubaneswar Chapter. All Rights Reserved.</p>
     </footer>
   </body>
-</html>
+
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+      }
+    </script>
+  </html>
