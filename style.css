@@ -54,7 +54,9 @@ header {
 .logo-bar img {
   height: 60px;
 }
-
+.mobile-chapter-name{
+  display: none;
+}
 .chapter-name {
   font-size: 1.5rem;
   font-weight: bold;
@@ -87,6 +89,11 @@ nav ul li a {
 
 nav ul li a:hover {
   text-decoration: underline;
+}
+
+.mobile-menu-toggle,
+.mobile-dropdown-menu {
+  display: none;
 }
 
 section {
@@ -259,7 +266,6 @@ footer {
 
 @media (max-width: 768px) {
   .logo-bar {
-    flex-direction: column;
     align-items: flex-start;
     padding: 15px 20px;
   }
@@ -296,6 +302,47 @@ footer {
     width: 100%;
     text-align: center;
   }
+  .about-text p{
+    text-align: justify;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+    background-color: #007acc;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  nav ul li {
+    padding: 0;
+    width: 100%;
+  }
+
+  .mobile-dropdown-menu {
+    display: none;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    background-color: #007acc;
+  }
+
+  .mobile-dropdown-menu li a {
+    display: block;
+    padding: 10px 16px;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid #005fa3;
+  }
+
+  .mobile-dropdown-menu li a:hover {
+    background-color: #005fa3;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
@@ -311,5 +358,62 @@ footer {
 
   .event-card img {
     height: 140px;
+  }
+  .chapter-name {
+    display: none;
+  }
+  .mobile-chapter-name{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #003366;
+    border: none;
+    padding: 1px 0;
+    text-align: center;
+  }
+
+  .logo-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: #fff;
+  }
+
+  .logo-bar img {
+    height: 50px;
+  }
+
+  .scrolling-text {
+    overflow: hidden;
+    background: #e6f0fa;
+    height: 35px;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .top-bar {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 15s linear infinite;
+  }
+
+  .top-bar a {
+    margin: 0 25px;
+    color: #0056b3;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .scrolling-text:hover .top-bar {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }
