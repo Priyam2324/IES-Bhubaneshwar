@@ -362,6 +362,7 @@ footer {
   .chapter-name {
     display: none;
   }
+  
   .mobile-chapter-name{
     display: block;
     font-size: 1.5rem;
