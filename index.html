@@ -1,243 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IEEE IES Bhubaneswar Section</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="scrolling-text">
-        <div class="top-bar">
-          <a href="https://www.ieee.org/" target="_blank">IEEE.org</a>
-          <a href="https://ieeexplore.ieee.org/Xplore/home.jsp" target="_blank"
-            >IEEE Xplore Digital Library</a
-          >
-          <a href="https://standards.ieee.org/" target="_blank"
-            >IEEE Standards</a
-          >
-          <a href="https://spectrum.ieee.org/" target="_blank">IEEE Spectrum</a>
-          <a href="https://www.ieee.org/sitemap.html" target="_blank"
-            >More Sites</a
-          >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEEE IES Bhubaneswar Section</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="scrolling-text">
+      <div class="top-bar">
+        <a href="https://www.ieee.org/" target="_blank">IEEE.org</a>
+        <a href="https://ieeexplore.ieee.org/Xplore/home.jsp" target="_blank">IEEE Xplore Digital Library</a>
+        <a href="https://standards.ieee.org/" target="_blank">IEEE Standards</a>
+        <a href="https://spectrum.ieee.org/" target="_blank">IEEE Spectrum</a>
+        <a href="https://www.ieee.org/sitemap.html" target="_blank">More Sites</a>
+      </div>
+    </div>
+
+    <div class="logo-bar">
+      <img src="Images/logo.png" alt="IEEE IES Bhubaneswar Logo" class="logo-left" />
+      <h1 class="chapter-name">IEEE IES Bhubaneswar</h1>
+      <img src="Images/ieee.png" alt="IEEE logo" class="logo-right" />
+    </div>
+    <h1 class="mobile-chapter-name">IEEE IES Bhubaneswar</h1>
+  </header>
+
+  <nav>
+    <ul class="desktop-menu">
+      <li><a href="#">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="join-us.html">JOIN US</a></li>
+      <li><a href="#events">EVENTS</a></li>
+      <li><a href="#office-bearers">OFFICE BEARERS</a></li>
+      <li><a href="#contact">CONTACT US</a></li>
+    </ul>
+
+    <!-- Mobile dropdown toggle -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">MENU ▼</div>
+
+    <!-- Mobile nav items (duplicate of desktop menu) -->
+    <ul id="mobileMenu" class="mobile-dropdown-menu">
+      <li><a onclick="toggleMobileMenu()" href="#">HOME</a></li>
+      <li><a onclick="toggleMobileMenu()" href="about.html">ABOUT</a></li>
+      <li><a onclick="toggleMobileMenu()" href="join-us.html" target="_blank">JOIN US</a></li>
+      <li><a onclick="toggleMobileMenu()" href="#events">EVENTS</a></li>
+      <li><a onclick="toggleMobileMenu()" href="#office-bearers">OFFICE BEARERS</a></li>
+      <li><a onclick="toggleMobileMenu()" href="#contact">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="content" id="about">
+      <div class="about-container">
+
+        <div class="about-text">
+          <h2>Geo code: CH10935</h2>
+          <h3>About IEEE IES Bhubaneswar Chapter</h3>
+          <p>
+            The IEEE Industrial Electronics Society (IES) Bhubaneswar Chapter
+            is a dynamic professional and academic hub under the IEEE
+            Bhubaneswar Section. It is committed to fostering technological
+            advancement and interdisciplinary collaboration in areas such as
+            industrial electronics, automation, robotics, control systems,
+            smart technologies, and Industry 4.0 applications. As a
+            collaborative platform, the chapter connects academicians,
+            researchers, industry professionals, entrepreneurs, and students
+            from Bhubaneswar and across Odisha. Through diverse
+            activities—including technical seminars, workshops, lectures,
+            panel discussions, hackathons, and industrial visits—it
+            facilitates knowledge sharing, innovation, and impactful
+            real-world project development. Beyond technical growth, the
+            chapter supports professional development and leadership among
+            young engineers and scholars. It offers opportunities for
+            mentorship, publishing, and interdisciplinary research addressing
+            current engineering challenges. By promoting curiosity,
+            collaboration, and lifelong learning, the IEEE IES Bhubaneswar
+            Chapter continues to shape the future of industrial electronics
+            and smart systems in the region and beyond.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="Images/about.png" alt="About IEEE IES Bhubaneswar" />
         </div>
       </div>
+    </section>
 
-      <div class="logo-bar">
-        <img
-          src="Images/logo.png"
-          alt="IEEE IES Bhubaneswar Logo"
-          class="logo-left"
-        />
-        <h1 class="chapter-name">IEEE IES Bhubaneswar</h1>
-        <img src="Images/ieee.png" alt="IEEE logo" class="logo-right" />
+    <section class="content" id="events">
+      <h2>Events</h2>
+      <div class="events-grid">
+        <div class="event-card upcoming" onclick="window.location.href='industry-conclave.html'">
+          <span class="notch">Upcoming</span>
+          <img src="Images/event-1.png" alt="Event 1" />
+          <h3 class="event-title">Industry Conclave</h3>
+          <p class="event-date">August 9-10, 2025</p>
+        </div>
+
+        <div class="event-card" onclick="window.location.href='icidea.html'">
+          <img src="Images/event-2.jpg" alt="Event 2" />
+          <h3 class="event-title">ICIDeA</h3>
+          <p class="event-date">February 21–22, 2025</p>
+        </div>
+
+        <div class="event-card" onclick="window.location.href='ieeeday.html'">
+          <img src="Images/event-3.jpg" alt="Event 3" />
+          <h3 class="event-title">IEEE Day Celebration</h3>
+          <p class="event-date">October 01, 2024</p>
+        </div>
+    </section>
+
+
+
+    <section class="content" id="office-bearers">
+      <h2>Office Bearers</h2>
+      <div class="office-bearers">
+        <div class="bearer">
+          <img src="Images/Chair.png" alt="Prof. Chandrasekhar Perumalla" />
+          <h3>Prof. Chandrasekhar Perumalla</h3>
+          <p>Chair<br />(IIT Bhubaneswar)</p>
+        </div>
+        <div class="bearer">
+          <img src="Images/Secretary.png" alt="Alivarani Mohapatra" />
+          <h3>Alivarani Mohapatra</h3>
+          <p>Secretary<br />(KIIT DU)</p>
+        </div>
+        <div class="bearer">
+          <img src="Images/Vice-Chair.png" alt="Dr. Chinmoy Kumar Panigrahi" />
+          <h3>Dr. Chinmoy Kumar Panigrahi</h3>
+          <p>Vice Chair<br />(KIIT DU)</p>
+        </div>
+        <div class="bearer">
+          <img src="Images/Joint-Secretary.png" alt="Dr. Ranjeeta Patel" />
+          <h3>Dr. Ranjeeta Patel</h3>
+          <p>Joint Secretary<br />(KIIT DU)</p>
+        </div>
+        <div class="bearer">
+          <img src="Images/Membership.png" alt="Dr. Sakuntala Mahapatra" />
+          <h3>Dr. Sakuntala Mahapatra</h3>
+          <p>Vice Chair, Membership<br />(TAT, Bhubaneswar)</p>
+        </div>
+        <div class="bearer">
+          <img src="Images/Treasurer.png" alt="Prof. Rabi Narayan Mishra" />
+          <h3>Prof. Rabi Narayan Mishra</h3>
+          <p>Treasurer<br />(SIT Bhubaneswar)</p>
+        </div>
       </div>
-      <h1 class="mobile-chapter-name">IEEE IES Bhubaneswar</h1>
-    </header>
+    </section>
 
-    <nav>
-      <ul class="desktop-menu">
-        <li><a href="#">HOME</a></li>
-        <li>
-          <a href="https://www.ieee.org/membership/join" target="_blank"
-            >JOIN US</a
-          >
-        </li>
-        <li><a href="#events">EVENTS</a></li>
-        <li><a href="#contact">CONTACT US</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="#office-bearers">OFFICE BEARERS</a></li>
-      </ul>
-
-      <!-- Mobile dropdown toggle -->
-      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">MENU ▼</div>
-
-      <!-- Mobile nav items (duplicate of desktop menu) -->
-      <ul id="mobileMenu" class="mobile-dropdown-menu">
-        <li><a onclick="toggleMobileMenu()" href="#">HOME</a></li>
-        <li>
-          <a
-            onclick="toggleMobileMenu()"
-            href="https://www.ieee.org/membership/join"
-            target="_blank"
-            >JOIN US</a
-          >
-        </li>
-        <li><a onclick="toggleMobileMenu()" href="#events">EVENTS</a></li>
-        <li><a onclick="toggleMobileMenu()" href="#contact">CONTACT US</a></li>
-        <li><a onclick="toggleMobileMenu()" href="about.html">ABOUT</a></li>
-        <li>
-          <a onclick="toggleMobileMenu()" href="#office-bearers"
-            >OFFICE BEARERS</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <main>
-      <section class="content" id="about">
-        <h2>Geo code: CH10935</h2>
-        <h3>About IEEE IES Bhubaneswar Chapter</h3>
-        <div class="about-container">
-          <div class="about-text">
-            <p>
-              The IEEE Industrial Electronics Society (IES) Bhubaneswar Chapter
-              is a dynamic professional and academic hub under the IEEE
-              Bhubaneswar Section. It is committed to fostering technological
-              advancement and interdisciplinary collaboration in areas such as
-              industrial electronics, automation, robotics, control systems,
-              smart technologies, and Industry 4.0 applications. As a
-              collaborative platform, the chapter connects academicians,
-              researchers, industry professionals, entrepreneurs, and students
-              from Bhubaneswar and across Odisha. Through diverse
-              activities—including technical seminars, workshops, lectures,
-              panel discussions, hackathons, and industrial visits—it
-              facilitates knowledge sharing, innovation, and impactful
-              real-world project development. Beyond technical growth, the
-              chapter supports professional development and leadership among
-              young engineers and scholars. It offers opportunities for
-              mentorship, publishing, and interdisciplinary research addressing
-              current engineering challenges. By promoting curiosity,
-              collaboration, and lifelong learning, the IEEE IES Bhubaneswar
-              Chapter continues to shape the future of industrial electronics
-              and smart systems in the region and beyond.
-            </p>
-          </div>
-          <div class="about-image">
-            <img src="Images/about.png" alt="About IEEE IES Bhubaneswar" />
-          </div>
+    <section class="content" id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-person">
+          <h3>Prof. Chandrasekhar Perumalla</h3>
+          <p><strong>Chair</strong>, IEEE IES Bhubaneswar Chapter</p>
+          <p>Phone: +91-6747135756</p>
+          <p>Email: pcsekhar@iitbbs.ac.in</p>
         </div>
-      </section>
 
-      <section class="content" id="events">
-        <h2>Events</h2>
-        <div class="events-grid">
-          <div
-            class="event-card upcoming"
-            onclick="window.location.href='industry-conclave.html'"
-          >
-            <span class="notch">Upcoming</span>
-            <img src="Images/event-1.png" alt="Event 1" />
-            <h3 class="event-title">Industry Conclave</h3>
-            <p class="event-date">August 9-10, 2025</p>
-          </div>
-
-          <div class="event-card" onclick="window.location.href='icidea.html'">
-            <img src="Images/event-2.jpg" alt="Event 2" />
-            <h3 class="event-title">ICIDeA</h3>
-            <p class="event-date">February 21–22, 2025</p>
-          </div>
-
-          <div class="event-card" onclick="window.location.href='ieeeday.html'">
-            <img src="Images/event-3.jpg" alt="Event 3" />
-            <h3 class="event-title">IEEE Day Celebration</h3>
-            <p class="event-date">October 01, 2024</p>
-          </div>
-      </section>
-
-      <section class="content" id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: example@ieee.org</p>
-        <p>Phone: +91-XXXXXXXXXX</p>
-      </section>
-
-      <section class="content" id="office-bearers">
-        <h2>Office Bearers</h2>
-        <div class="office-bearers">
-          <div class="bearer">
-            <img src="Images/Chair.png" alt="Prof. Chandrasekhar Perumalla" />
-            <h3>Prof. Chandrasekhar Perumalla</h3>
-            <p>Chair<br />(IIT Bhubaneswar)</p>
-          </div>
-          <div class="bearer">
-            <img src="Images/Secretary.png" alt="Alivarani Mohapatra" />
-            <h3>Alivarani Mohapatra</h3>
-            <p>Secretary<br />(KIIT DU)</p>
-          </div>
-          <div class="bearer">
-            <img
-              src="Images/Vice-Chair.png"
-              alt="Dr. Chinmoy Kumar Panigrahi"
-            />
-            <h3>Dr. Chinmoy Kumar Panigrahi</h3>
-            <p>Vice Chair<br />(KIIT DU)</p>
-          </div>
-          <div class="bearer">
-            <img src="Images/Joint-Secretary.png" alt="Dr. Ranjeeta Patel" />
-            <h3>Dr. Ranjeeta Patel</h3>
-            <p>Joint Secretary<br />(KIIT DU)</p>
-          </div>
-          <div class="bearer">
-            <img src="Images/Membership.png" alt="Dr. Sakuntala Mahapatra" />
-            <h3>Dr. Sakuntala Mahapatra</h3>
-            <p>Vice Chair, Membership<br />(TAT, Bhubaneswar)</p>
-          </div>
-          <div class="bearer">
-            <img src="Images/Treasurer.png" alt="Prof. Rabi Narayan Mishra" />
-            <h3>Prof. Rabi Narayan Mishra</h3>
-            <p>Treasurer<br />(SIT Bhubaneswar)</p>
-          </div>
+        <div class="contact-person">
+          <h3>Dr. Chinmoy Kumar Panigrahi</h3>
+          <p><strong>Vice Chair</strong>, IEEE IES Bhubaneswar Chapter</p>
+          <p>Phone: 9439050522</p>
+          <p>Email: panigrahichinmoy@gmail.com</p>
         </div>
-      </section>
-    </main>
 
-    <footer>
-      <p>&copy; 2025 IEEE IES Bhubaneswar Chapter. All Rights Reserved.</p>
-    </footer>
-  </body>
+        <div class="contact-person">
+          <h3>Dr. Ranjeeta Patel</h3>
+          <p><strong>Joint Secretary</strong>, IEEE IES Bhubaneswar Chapter</p>
+          <p>Phone: 8658822422</p>
+          <p>Email: ranjeeta.patelfel@kiit.ac.in</p>
+        </div>
+      </div>
+    </section>
 
-  <script>
-    function getState() {
-      console.log("Toggling mobile menu");
-      const menu = document.getElementById("mobileMenu");
-      const btn = document.querySelector(".mobile-menu-toggle");
-      console.log(menu.style.display);
-      console.log(menu.style.display === "flex");
-      console.log(menu.style.display === "none");
-    }
-    function toggleMobileMenu() {
-      const menu = document.getElementById("mobileMenu");
-      const btn = document.querySelector(".mobile-menu-toggle");
+  </main>
 
-      const isOpen = menu.style.display === "block";
+  <footer>
+    <p>&copy; 2025 IEEE IES Bhubaneswar Chapter. All Rights Reserved.</p>
+  </footer>
+</body>
 
-      // Toggle menu visibility
-      menu.style.display = isOpen ? "none" : "block";
+<script>
+  function getState() {
+    console.log("Toggling mobile menu");
+    const menu = document.getElementById("mobileMenu");
+    const btn = document.querySelector(".mobile-menu-toggle");
+    console.log(menu.style.display);
+    console.log(menu.style.display === "flex");
+    console.log(menu.style.display === "none");
+  }
+  function toggleMobileMenu() {
+    const menu = document.getElementById("mobileMenu");
+    const btn = document.querySelector(".mobile-menu-toggle");
 
-      // Update button arrow
-      btn.innerHTML = "MENU " + (isOpen ? "▼" : "▲"); // ▼ : ▲
-    }
+    const isOpen = menu.style.display === "block";
 
-    // Collapse mobile menu when a link is clicked
-    document.addEventListener("DOMContentLoaded", () => {
-      const mobileMenuLinks = document.querySelectorAll("#mobileMenu a");
-      mobileMenuLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          document.getElementById("mobileMenu").style.display = "none";
-        });
+    // Toggle menu visibility
+    menu.style.display = isOpen ? "none" : "block";
+
+    // Update button arrow
+    btn.innerHTML = "MENU " + (isOpen ? "▼" : "▲"); // ▼ : ▲
+  }
+
+  // Collapse mobile menu when a link is clicked
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenuLinks = document.querySelectorAll("#mobileMenu a");
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        document.getElementById("mobileMenu").style.display = "none";
       });
     });
+  });
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const OFFSET = 30; // adjust this number as needed
+  document.addEventListener("DOMContentLoaded", function () {
+    const OFFSET = 30; // adjust this number as needed
 
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          const targetId = this.getAttribute("href").substring(1);
-          const targetEl = document.getElementById(targetId);
-          if (targetEl) {
-            e.preventDefault();
-            const yOffset = -OFFSET;
-            const y =
-              targetEl.getBoundingClientRect().top +
-              window.pageYOffset +
-              yOffset;
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        const targetId = this.getAttribute("href").substring(1);
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          const yOffset = -OFFSET;
+          const y =
+            targetEl.getBoundingClientRect().top +
+            window.pageYOffset +
+            yOffset;
 
-            window.scrollTo({ top: y, behavior: "smooth" });
-          }
-        });
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
       });
     });
-  </script>
+  });
+</script>
+
 </html>
